@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DELICATES — хамон, сыры, консервы | Заказ в Telegram</title>
+  <meta name="description" content="Испанские деликатесы: хамон, сыры, консервы. Соберите заказ в корзине и оформите в Telegram одним сообщением. Доставка по РФ 2–3 раза в неделю." />
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+
+<body>
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#top">
+          <div class="mark">D</div>
+          <div>
+            <b>DELICATES</b>
+            <span>Испания → доставка по РФ • заказ в Telegram</span>
+          </div>
+        </a>
+
+        <nav class="navlinks">
+          <a href="#gallery">Фото</a>
+          <a href="#video">Видео</a>
+          <a href="#catalog">Каталог</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#delivery">Доставка</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="actions">
+          <button class="btn btn-accent" id="btnTelegramTop">Telegram</button>
+
+          <div class="cartwrap">
+            <button class="btn iconbtn" id="cartBtn" aria-label="Корзина">🛒</button>
+            <div class="count" id="cartCount">0</div>
+          </div>
+
+          <button class="btn iconbtn burger" id="btnBurger" aria-label="Меню">☰</button>
+        </div>
+      </div>
+
+      <div class="mobile" id="mobileMenu" hidden>
+        <div class="box">
+          <a href="#gallery" data-close-mobile>Фото</a>
+          <a href="#video" data-close-mobile>Видео</a>
+          <a href="#catalog" data-close-mobile>Каталог</a>
+          <a href="#reviews" data-close-mobile>Отзывы</a>
+          <a href="#delivery" data-close-mobile>Доставка</a>
+          <a href="#faq" data-close-mobile>FAQ</a>
+          <button class="btn btn-accent" id="btnTelegramMobile">Перейти в Telegram</button>
+          <button class="btn" id="btnCartMobile">Открыть корзину</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top" class="section hero">
+    <div class="container">
+      <div class="heroGrid">
+
+        <section class="panel heroText">
+          <h1>Испанские деликатесы<br/>в строгом качестве</h1>
+          <p>
+            Соберите заказ в корзине и оформите одним сообщением в Telegram.
+            Мы подтвердим наличие, покажем фото товара/веса, упакуем (вакуум/термо) и отправим.
+          </p>
+
+          <div class="tags">
+            <div class="tag accent">2–3 отправки/нед</div>
+            <div class="tag">Фото перед отправкой</div>
+            <div class="tag">Вакуум/термо</div>
+            <div class="tag">Без регистрации</div>
+          </div>
+
+          <div class="heroBtns">
+            <button class="btn btn-accent" id="btnTelegramHero">Оформить в Telegram</button>
+            <button class="btn" id="btnOpenCartHero">Открыть корзину</button>
+            <a class="btn" href="#catalog">Перейти в каталог</a>
+          </div>
+
+          <div class="note accent">
+            <strong>Оплата — 100% предоплата</strong> (пищевой товар + индивидуальная упаковка).
+            Наложенный платеж не используем.
+          </div>
+
+          <div class="kpis">
+            <div class="item"><b>5–30 мин</b><span>ответ в Telegram</span></div>
+            <div class="item"><b>ПВЗ/курьер</b><span>по городу</span></div>
+            <div class="item"><b>Фото</b><span>товар/вес/упаковка</span></div>
+            <div class="item"><b>Трек</b><span>после отправки</span></div>
+          </div>
+        </section>
+
+        <aside class="panel heroMedia">
+          <div class="heroCover">
+            <img
+              src="https://www.jamonarium.com/modules/bonbanner/views/img/3f5959c4a49aa958a7ea46959aa09de3f3d73e78_embutidos7.jpg"
+              alt="Деликатесы на столе"
+            />
+            <div class="heroOverlay"></div>
+
+            <div class="heroBadge">
+              <div>
+                <b>Строгий контроль</b>
+                <span>Фото партии и упаковки перед отправкой</span>
+              </div>
+              <button class="btn btn-accent" id="btnAskPresence">Запросить наличие</button>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- PHOTO GALLERY -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="head">
+        <div>
+          <h2>Фото</h2>
+          <p>Товар / нарезка / упаковка / посылка — чтобы клиент сразу понимал, что получит.</p>
+        </div>
+        <button class="btn" id="btnAskPhoto">Попросить фото наличия</button>
+      </div>
+
+      <div class="gallery">
+        <div class="galleryTop">
+          <div>
+            <b>Галерея</b>
+            <span>4 примера — заменишь на свои фото</span>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <span style="color:var(--muted); font-size:12px;">листай</span>
+          </div>
+        </div>
+
+        <div style="position:relative;">
+          <div class="slides" id="slides">
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1546554137-f86b9593a222?auto=format&fit=crop&w=1600&q=80" alt="Хамон">
+              <div class="cap">Хамон: аккуратная нарезка и вакуум — удобно хранить и красиво на стол.</div>
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1452195100486-9cc805987862?auto=format&fit=crop&w=1600&q=80" alt="Сыр">
+              <div class="cap">Сыры: порции 200–500 г. Подберём “мягче/ярче/на подарок”.</div>
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1540914124281-342587941389?auto=format&fit=crop&w=1600&q=80" alt="Упаковка">
+              <div class="cap">Упаковка: вакуум + защита + коробка. По запросу — термоупаковка.</div>
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80" alt="Посылка">
+              <div class="cap">Перед отправкой: фото товара/веса и фото коробки + трек в Telegram.</div>
+            </div>
+          </div>
+
+          <div class="galBtns">
+            <button class="navbtn prev" id="prevBtn" aria-label="Назад">‹</button>
+            <button class="navbtn next" id="nextBtn" aria-label="Вперед">›</button>
+          </div>
+        </div>
+
+        <div class="dots" id="dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section id="video" class="section">
+    <div class="container">
+      <div class="head">
+        <div>
+          <h2>Видео-обзоры</h2>
+          <p>2 коротких ролика: “обзор товара” и “как упаковываем”. Это сильно поднимает доверие.</p>
+        </div>
+        <button class="btn btn-accent" id="btnAskVideo">Запросить видео наличия</button>
+      </div>
+
+      <div class="videoGrid">
+        <div class="videoCard">
+          <div class="videoHead">
+            <b>Обзор товара</b><span>30–60 сек</span>
+          </div>
+          <video controls playsinline preload="metadata"
+            poster="https://images.unsplash.com/photo-1546554137-f86b9593a222?auto=format&fit=crop&w=1600&q=80">
+            <source src="video/review-1.mp4" type="video/mp4"/>
+          </video>
+        </div>
+
+        <div class="videoCard">
+          <div class="videoHead">
+            <b>Упаковка перед отправкой</b><span>вакуум + коробка</span>
+          </div>
+          <video controls playsinline preload="metadata"
+            poster="https://images.unsplash.com/photo-1540914124281-342587941389?auto=format&fit=crop&w=1600&q=80">
+            <source src="video/packing.mp4" type="video/mp4"/>
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section id="catalog" class="section">
+    <div class="container">
+      <div class="head">
+        <div>
+          <h2>Каталог</h2>
+          <p>Добавляйте в корзину → “Оформить в Telegram”. Без регистрации, без лишних форм.</p>
+        </div>
+        <button class="btn" id="btnOpenCartTop">Открыть корзину</button>
+      </div>
+
+      <div class="tools">
+        <div class="filters">
+          <button class="pill active" data-filter="all">Все</button>
+          <button class="pill" data-filter="hamon">Хамон</button>
+          <button class="pill" data-filter="cheese">Сыры</button>
+          <button class="pill" data-filter="canned">Консервы</button>
+          <button class="pill" data-filter="sets">Наборы</button>
+        </div>
+
+        <div class="search" role="search">
+          🔎 <input id="searchInput" type="search" placeholder="Поиск: iberico, manchego, тунец..." />
+        </div>
+      </div>
+
+      <div class="cards" id="products"></div>
+
+      <div style="height:12px;"></div>
+      <div class="panel">
+        <div class="note">
+          Не хотите выбирать долго? Напишите “подбор” — предложим 2–3 варианта под бюджет и вкус.
+        </div>
+        <div style="height:10px;"></div>
+        <button class="btn btn-accent" id="btnPick">Подобрать в Telegram</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="section">
+    <div class="container">
+      <div class="head">
+        <div>
+          <h2>Отзывы</h2>
+          <p>Сюда лучше добавить скрины из Telegram (позже). Пока — текстовые отзывы как пример.</p>
+        </div>
+        <button class="btn" id="btnAskReviews">Попросить отзывы/скрины</button>
+      </div>
+
+      <div class="reviews">
+        <div class="review">
+          <p>“Перед отправкой прислали фото товара и упаковки. Хамон приехал идеально — вакуум аккуратный.”</p>
+          <div class="who"><span>Москва</span><span>★★★★★</span></div>
+        </div>
+        <div class="review">
+          <p>“Собрал корзину на сайте, в Telegram отправилось одним сообщением — удобно. Быстро ответили.”</p>
+          <div class="who"><span>Казань</span><span>★★★★★</span></div>
+        </div>
+        <div class="review">
+          <p>“Подбор сделали по вкусу: не слишком солёное, сыр мягче. Подарочный набор — топ.”</p>
+          <div class="who"><span>Краснодар</span><span>★★★★★</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERY / PAYMENT -->
+  <section id="delivery" class="section">
+    <div class="container">
+      <div class="head">
+        <div>
+          <h2>Доставка и оплата</h2>
+          <p>Отправляем 2–3 раза в неделю. Подберём вариант: ПВЗ/курьер (в зависимости от города).</p>
+        </div>
+        <button class="btn btn-accent" id="btnDeliveryAsk">Уточнить доставку</button>
+      </div>
+
+      <div class="panel">
+        <div class="note accent">
+          <strong>Оплата — 100% предоплата</strong> (пищевой товар + индивидуальная упаковка).<br/>
+          После оплаты: подтверждаем наличие → собираем → фото товара/веса → упаковка → трек.
+        </div>
+        <div style="height:10px;"></div>
+        <div class="note">
+          <strong>Упаковка:</strong> вакуум по возможности, защита, коробка. По запросу — термоупаковка.<br/>
+          <strong>Важно:</strong> сроки зависят от города и выбранной службы.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="head">
+        <div>
+          <h2>О нас</h2>
+          <p>Коротко и строго: кто вы, почему этим занимаетесь, что гарантируете клиенту.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="note">
+          Мы привозим деликатесы из Испании и собираем заказы под клиента: подбор, фото наличия, аккуратная упаковка.
+          Работаем через Telegram, потому что это быстрее и понятнее — вы получаете ответы, фото и трек в одном месте.
+        </div>
+        <div style="height:10px;"></div>
+        <button class="btn" id="btnAboutAsk">Задать вопрос в Telegram</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="head">
+        <div>
+          <h2>FAQ</h2>
+          <p>Короткие ответы на главные возражения — это напрямую влияет на покупки.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Это оригинальный товар?</summary>
+          <p>Перед отправкой присылаем фото товара/этикеток/партии (по возможности). Уточняйте в Telegram.</p>
+        </details>
+        <details>
+          <summary>Можно на подарок?</summary>
+          <p>Да. Соберём набор, упакуем аккуратно. Можно добавить открытку/подписать.</p>
+        </details>
+        <details>
+          <summary>Как хранить?</summary>
+          <p>В зависимости от товара. Для нарезки в вакууме — обычно холодильник. Подскажем по каждой позиции.</p>
+        </details>
+        <details>
+          <summary>Почему предоплата?</summary>
+          <p>Это пищевой товар + индивидуальная сборка/упаковка. После оплаты мы фиксируем заказ и готовим отправку.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footrow">
+        <div>© <span id="year"></span> DELICATES • заказ через Telegram</div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn" id="btnFooterCart">Корзина</button>
+          <button class="btn btn-accent" id="btnTelegramFooter">Telegram</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Telegram -->
+  <div class="floatTG" id="floatTG">
+    <div class="dot" aria-hidden="true"></div>
+    Telegram
+  </div>
+
+  <!-- Toast (уведомление) -->
+  <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Mobile bottom bar -->
+  <div class="mbar" id="mbar" hidden>
+    <div class="mbar__inner">
+      <div class="mbar__sum">
+        <span>Итого</span>
+        <b id="mbarTotal">0 ₽</b>
+      </div>
+      <button class="btn btn-accent mbar__btn" id="mbarCheckout">Оформить</button>
+    </div>
+  </div>
+
+  <!-- BACKDROP + CART -->
+  <div class="backdrop" id="backdrop"></div>
+
+  <aside class="cart" id="cart" aria-label="Корзина">
+    <div class="carthead">
+      <b>Корзина</b>
+      <div class="minirow">
+        <button class="x" id="cartClear" title="Очистить">🧹</button>
+        <button class="x" id="cartClose" aria-label="Закрыть">✕</button>
+      </div>
+    </div>
+
+    <div class="cartitems" id="cartItems"></div>
+
+    <div class="cartfoot">
+      <div class="total">
+        <span>Итого</span>
+        <strong id="cartTotal">0 ₽</strong>
+      </div>
+      <div class="split">
+        <button class="btn" id="cartContinue">Продолжить</button>
+        <button class="btn btn-accent" id="cartCheckout">Оформить в Telegram</button>
+      </div>
+      <div class="note accent" style="margin:0;">
+        Оплата — 100% предоплата. Наличие подтверждаем перед отправкой.
+      </div>
+    </div>
+  </aside>
+
+ <script src="js/main.js"></script>
+</body>
+</html>
